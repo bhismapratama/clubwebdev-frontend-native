@@ -4,23 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pertemuan 1</title>
 
     <style>
         body {
             background: black;
+            padding: 20px;
+        }
+
+        h2 {
             color: white;
+        }
+
+        .wrap {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: 640px) {
+            body {
+                padding: 60px;
+            }
+            .wrap {
+                gap: 40px;
+            }
+        }
+
+        input {
+            padding: 10px 20px;
+            border: none;
+            color: black;
+        }
+        #displayData {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            gap: 5px;
+            width: 500px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .author,
+        .content,
+        .image,
+        .title {
+            margin-bottom: 5px;
+        }
+
+        .image {
+            color: aqua;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+        img {
+            width: 40%;
         }
     </style>
 </head>
 
 <body>
-    <div id="card">
-        halo
+    <div class="wrap">
+        <div>
+            <h2>Inputkan Limit</h2>
+            <input value="" id="inputLimit" type="number" placeholder="ex: 10">
+        </div>
+
+        <div>
+            <h2>Inputkan Page</h2>
+            <input value="" id="inputCurrentPage" type="number" placeholder="ex: 10">
+        </div>
+
+        <div>
+            <h2>Inputkan Title</h2>
+            <input value="" id="inputSearch" type="text" placeholder="ex: pemandangan">
+        </div>
     </div>
-
-
-    <script src="./main.js"></script>
+    <div id="displayData">
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
